@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+set architecture arm
+target remote :1234
+break _start
+continue
+echo \n[준비 완료] gdb_cheat.txt의 5개 명령으로 3장면을 채집하라\n

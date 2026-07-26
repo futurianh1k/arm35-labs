@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+# 자동 인식 실패 시 아래 수동 설정 줄이 필수다
+# 주의: qemu 초기 정지점이 곧 _start 이므로 continue 없이 바로 si 로 시작한다
+set architecture aarch64
+target remote :1234
+echo \n[준비] 지금 위치가 _start 다. si로 진행하며 x2·w3 관계와 sp·pc 분리를 채집하라\n

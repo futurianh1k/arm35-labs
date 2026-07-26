@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+# 주의: qemu 초기 정지점이 곧 _start 이므로 continue 없이 바로 si 로 시작한다
+set architecture arm
+target remote :1234
+display/x $cpsr
+echo \n[준비] 지금 위치가 _start 다. si로 관찰점 A~D에 도달할 때마다 CPSR 상위 한 자리를 판독해 가설표와 대조하라\n

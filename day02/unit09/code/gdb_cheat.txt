@@ -1,0 +1,8 @@
+LAB-09 필수 5명령
+  si                    한 명령 실행
+  info registers        x0~x30 전체 조망 (pc가 목록 밖임을 확인)
+  p/x $x3  /  p/x $w3   w뷰 기록 후 상위 32비트=0 확인
+  p/x $sp  /  p/x $pc   분리 관리 채증
+  x/i $pc               현재 명령
+채집 미션: (1) x2=12·w3=12·x3상위0 로그 (2) sp/pc 분리 한 줄 해석
+보드 연결(가능 시): ssh rpi4 → lscpu, cat /proc/cpuinfo 로그 첨부.

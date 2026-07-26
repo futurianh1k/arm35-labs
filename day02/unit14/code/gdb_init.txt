@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+set architecture arm
+target remote :1234
+break str_stats
+continue
+echo \n[준비] 실패 케이스 재현: c(계속)로 해당 호출까지 간 뒤 si로 루프를 밟아 원인 한 줄을 찾아라\n

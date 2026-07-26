@@ -1,0 +1,14 @@
+LAB-06 GDB 치트시트 — 이 5개면 충분하다
+----------------------------------------
+1) si                   한 명령 실행 (step instruction)
+2) info registers       r0~r15 + cpsr 전체 보기
+3) p/x $cpsr            CPSR 16진수 (N=bit31 Z=30 C=29 V=28)
+4) p/x $pc              현재 PC 값
+5) x/6i $pc             현재 위치부터 명령 6개 역어셈블
+----------------------------------------
+채집 미션 (스크린샷 또는 로그 저장)
+장면1: add 직후 info registers → r2=0xd(13), r3=0x7 확인
+장면2: cmp r1,r0 직후 p/x $cpsr → N비트=1 확인
+       cmp r0,r0 직후 p/x $cpsr → Z비트=1, C비트=1 확인
+장면3: mov r4,pc 직후 → p/x $r4 와 (해당 명령 주소+8) 비교
+검증 질문: 왜 +8인가? (힌트: 3단 파이프라인 Fetch-Decode-Execute)

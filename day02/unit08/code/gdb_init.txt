@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+# 주의: qemu 초기 정지점이 곧 _start 이므로 continue 없이 바로 si 로 시작한다
+set architecture arm
+target remote :1234
+break here
+echo \n[준비] 지금 위치가 _start 다. si로 (A)구간을 밟아 r1→r2→r3를 채집하고, here 도달 시 r7·pc를 대조하라\n

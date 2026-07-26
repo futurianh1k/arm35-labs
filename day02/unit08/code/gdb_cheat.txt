@@ -1,0 +1,8 @@
+LAB-08 필수 5명령
+  si                  한 명령 실행 (A구간 3회 밟기)
+  info registers      r1·r2·r3 변화 채집 (10→20→40)
+  p/x $r7             here 도달 시: mov r7,pc 의 결과
+  p/x $pc             현재 PC — r7과의 차이를 산술로
+  x/i $pc             지금 설 명령 확인
+채집 미션: (1) A구간 3단 레지스터 로그 (2) r7-{mov명령주소}=8 계산 근거
+함정 주의: continue로 svc까지 가면 r7이 1로 덮인다 — here에서 관찰 먼저.

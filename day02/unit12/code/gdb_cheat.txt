@@ -1,0 +1,8 @@
+LAB-12 필수 5명령
+  si                  한 명령 실행 (loop 1회차 4명령)
+  info registers      r0·r1 +4 전진, r2 감소 채집
+  x/8wx &src          원본 8워드
+  x/8wx &dst          복사 결과 8워드 (src와 대조)
+  p/x $cpsr           subs 후 Z 확인(마지막 회차 Z=1)
+채집 미션: (1) r0·r1 전진 로그 (2) dst 덤프 대조표 (3) make dis에서 [pc,#..]와 .word 캡처.
+읽기 주의: x/8wx는 워드 단위 리틀엔디안 표시 — 바이트 뒤집힘이 이미 반영돼 있다.

@@ -1,0 +1,8 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+set architecture arm
+target remote :1234
+break asm_max
+break main
+continue
+echo \n[준비] asm_max 진입 시 r0·r1(인자 조항), bx lr 직전 r0(반환 조항)을 채증하라\n
+echo main 프롤로그에서는 x/4wx $sp 로 대피된 옛 fp·lr 을 확인한다\n

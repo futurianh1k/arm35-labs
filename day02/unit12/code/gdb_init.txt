@@ -1,0 +1,6 @@
+# 자동 접속 스크립트 — make gdb 가 사용
+set architecture arm
+target remote :1234
+break loop
+continue
+echo \n[준비] si로 1회차를 밟으며 r0·r1의 +4 전진을 기록하고, x/8wx &dst 로 결과를 덤프하라\n
