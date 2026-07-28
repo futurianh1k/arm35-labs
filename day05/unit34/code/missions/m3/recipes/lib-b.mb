@@ -1,0 +1,5 @@
+NAME    = lib-b
+DEPENDS = lib-a
+SRC     = src/libb.c
+COMPILE = $CC -static -o out/lib-b $SRC
+INSTALL = cp out/lib-b image/usr/bin/lib-b

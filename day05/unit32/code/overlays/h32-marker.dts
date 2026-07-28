@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+/* LAB-32 서명 의식 — 실물 DTB의 uart0에 우리 마커를 새겨라 */
+/ {
+    fragment@0 {
+        target = <&uart0>;
+        __overlay__ {
+            /* TODO: arm35,marker = "h32"; */
+        };
+    };
+};

@@ -1,0 +1,24 @@
+# Kconfig.mini — 4형제 축약 문법 (실물과 1:1 대응)
+config ARCH_BCM2711
+    bool
+    default y
+
+config SERIAL_PL011
+    bool
+    depends on ARCH_BCM2711
+
+config SERIAL_CONSOLE
+    bool
+    depends on SERIAL_PL011
+    select TTY_CORE
+
+config TTY_CORE
+    bool
+
+config NET_CORE
+    bool
+    default n
+
+config NET_DRV
+    bool
+    depends on NET_CORE

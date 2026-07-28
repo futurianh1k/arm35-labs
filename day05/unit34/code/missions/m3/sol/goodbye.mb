@@ -1,0 +1,4 @@
+NAME    = goodbye
+SRC     = src/goodbye.c
+COMPILE = $CC -static -o out/goodbye $SRC
+INSTALL = cp out/goodbye image/usr/bin/goodbye
