@@ -1,0 +1,10 @@
+# 콘솔 생명선 — PL011 활성(20·24차시)
+enable_uart=1
+# 적재 대상 명시 — 화물칸의 주인공(32차시 산출물 좌석)
+kernel=kernel8.img
+# AArch64 모드 — 우리의 A64 세계
+arm_64bit=1
+# 우리 손 필름 — i2c1에 불 켜기(오늘 3부의 표적)
+dtoverlay=i2c1-on
+# 기성 필름의 손잡이 예시 — 오디오 노브
+dtparam=audio=on

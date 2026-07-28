@@ -1,0 +1,7 @@
+# LAB-31 TODO — 크로스 레시피 최소 문법 (31차시 골격)
+NAME    = hello
+SRC     = src/hello.c
+# TODO 1: COMPILE — $CC 로 $SRC 를 -static 크로스 빌드해 out/hello 생성
+COMPILE = echo "TODO compile"
+# TODO 2: INSTALL — 가짜 루트 규약: image/usr/bin/hello 로 설치
+INSTALL = echo "TODO install"

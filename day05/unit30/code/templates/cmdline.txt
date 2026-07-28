@@ -1,0 +1,1 @@
+TODO: 한 줄 3조각 — console=serial0,115200 root=/dev/mmcblk0p2 rootwait (개행 금지)

@@ -1,0 +1,11 @@
+[Unit]
+Description=ARM35 hello service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hello
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

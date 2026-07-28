@@ -1,0 +1,6 @@
+# config.txt — 로더(GPU)가 읽는 선언문. 각 줄에 "이유 주석" 필수(수업 규율).
+# TODO: 필수 5키를 채워라 — enable_uart / kernel / arm_64bit / dtoverlay / dtparam
+# (아래 예시는 placeholder — 그대로 두면 check 1부가 잡는다)
+
+# enable_uart=TODO
+# kernel=TODO

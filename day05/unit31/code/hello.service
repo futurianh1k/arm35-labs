@@ -1,0 +1,10 @@
+# LAB-31 TODO — 유닛 3부작. 필수 키를 채워라(절대 경로 규율!)
+[Unit]
+Description=TODO
+
+[Service]
+# TODO: Type=simple / ExecStart=<절대경로>/hello / Restart=on-failure
+ExecStart=hello
+
+[Install]
+# TODO: WantedBy=multi-user.target

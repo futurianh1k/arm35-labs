@@ -1,0 +1,4 @@
+NAME    = lib-a
+SRC     = src/liba.c
+COMPILE = $CC -static -o out/lib-a $SRC
+INSTALL = cp out/lib-a image/usr/bin/lib-a

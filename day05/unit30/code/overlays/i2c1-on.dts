@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+/* LAB-30 — 실물 RPi4 DTB에 병합될 우리 손 필름 (H20 문법의 실전) */
+/ {
+    fragment@0 {
+        target = <&i2c1>;
+        __overlay__ {
+            /* TODO: 전원 스위치 한 줄 — status = "..." */
+        };
+    };
+};

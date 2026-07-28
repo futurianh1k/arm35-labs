@@ -1,0 +1,5 @@
+NAME    = app
+DEPENDS = lib-b
+SRC     = src/app.c
+COMPILE = $CC -static -o out/app $SRC
+INSTALL = cp out/app image/usr/bin/app

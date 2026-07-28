@@ -1,0 +1,3 @@
+# bbappend 체험 — 원본(hello.mb)은 그대로, 이 파일이 COMPILE만 덮어쓴다.
+# (완성 후 주석 해제해 배너가 " (patched)" 로 바뀌는 것을 관측하라 — 원본 diff는 0)
+# COMPILE = $CC -static -DTAG='" (patched)"' -o out/hello $SRC

@@ -1,0 +1,4 @@
+NAME    = hello
+SRC     = src/hello.c
+COMPILE = $CC -static -o out/hello $SRC
+INSTALL = mkdir -p image/usr/bin && cp out/hello image/usr/bin/hello
