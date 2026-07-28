@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+/* LAB-20 골격 — TODO: i2c1에 불을 켜는 오버레이를 완성하라 */
+/ {
+    fragment@0 {
+        target = <&i2c1>;                 /* 어디에: 라벨 참조 */
+        __overlay__ {
+            /* TODO: 전원 스위치 속성 한 줄 (status = "...")  */
+        };
+    };
+};

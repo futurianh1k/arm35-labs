@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+/* 모범답안 (강사용 — 학생 배포 제외) */
+/ {
+    fragment@0 {
+        target = <&i2c1>;
+        __overlay__ {
+            status = "okay";
+        };
+    };
+};

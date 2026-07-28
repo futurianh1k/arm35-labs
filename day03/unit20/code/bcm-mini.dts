@@ -1,0 +1,25 @@
+/dts-v1/;
+/* 교육용 축약판 — 실제 BCM2711 주소 사용, 실보드 불필요 */
+/ {
+    compatible = "brcm,bcm2711";
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    soc {
+        compatible = "simple-bus";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        uart0: serial@fe201000 {
+            compatible = "arm,pl011";
+            reg = <0xfe201000 0x200>;
+            status = "okay";
+        };
+
+        i2c1: i2c@fe804000 {
+            compatible = "brcm,bcm2835-i2c";
+            reg = <0xfe804000 0x200>;
+            status = "disabled";          /* 잠든 건물 — 오늘의 표적 */
+        };
+    };
+};
