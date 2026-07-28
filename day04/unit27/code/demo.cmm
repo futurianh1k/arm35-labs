@@ -1,0 +1,18 @@
+; demo.cmm — TRACE32 Practice 독해 표본 (LAB-27 1부의 지문)
+; 목적을 재구성하라: 이 대본은 무엇을 자동으로 확인하는가?
+
+SYStem.Up                          ; [1] 타깃 연결과 정지 확보 — 모든 대본의 1행
+Data.LOAD.Elf irq26.elf            ; [2] 이미지·심볼 적재 — 이름이 곧 지도
+Break.Set irq_handler              ; [3] 핸들러 입구에 정지점
+Go                                 ; [4] 실행 개시
+WAIT !RUN() 5.s                    ; [5] 정지(히트)까지 최대 5초 대기 — 자동화의 짝
+IF RUN()
+(
+  PRINT "TIMEOUT: handler not hit" ; [6a] 판정 실패 갈래
+)
+ELSE
+(
+  PRINT "ticks=" Var.VALUE(ticks)  ; [6b] 변수 판독 — 판정의 재료
+  Data.List irq_handler            ; [7] 코드 창 확인
+)
+ENDDO
